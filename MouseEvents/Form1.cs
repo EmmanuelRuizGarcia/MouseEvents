@@ -15,6 +15,13 @@ namespace MouseEvents
         public Form1()
         {
             InitializeComponent();
+            comboBox1.MouseWheel += new MouseEventHandler(ComboBox1_MouseWheel);
+        }
+
+        private void ComboBox1_MouseWheel(object sender, MouseEventArgs e)
+        {
+            HandledMouseEventArgs ee = (HandledMouseEventArgs)e;
+            ee.Handled = true;
         }
     }
 }
